@@ -6,9 +6,9 @@ var https = require('https');
     path: '/http-examples/step1.html'
   };
 
-function getAndPrintHTML (requestOptions) {
+function getAndPrintHTML (args) {
   var htmlFile = "";
-  https.get(requestOptions, function(response) {
+  https.get(args, function(response) {
     // set utf encoding
     response.setEncoding('utf8');
     response.on('data', function(data){
